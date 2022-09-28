@@ -105,16 +105,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   shadow: {
+    shadowColor: '#ffffff',
     ...Platform.select({
       ios: {
-          shadowColor: '#ffffff',
-          shadowOffset: { width: 0, height: 0 },
-          shadowOpacity: 0.8,
-          shadowRadius: 20,    
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0.8,
+        shadowRadius: 20,    
       },
       android: {
-          shadowColor: '#ffffff',
-          elevation: 20,
+        elevation: 20,
       },
     }),
   },

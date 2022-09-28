@@ -105,6 +105,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   shadow: {
+    borderRadius: 10,
+    backgroundColor: '#000',
     shadowColor: '#ffffff',
     ...Platform.select({
       ios: {

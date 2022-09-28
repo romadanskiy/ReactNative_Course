@@ -33,7 +33,9 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <KeyboardAvoidingView style={styles.container} behavior='padding'>
+      <KeyboardAvoidingView 
+        style={styles.container} 
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
         <View>
           <View style={styles.shadow}>
             <Image 

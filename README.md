@@ -14,6 +14,6 @@ ITIS / 7 sem 4 course
 
 | Android | iOS |
 :--------:|:-------:
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_1.png?raw=true" height="380"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_1.PNG?raw=true" height="380"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_2.png?raw=true" height="380"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_2.PNG?raw=true" height="380"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_3.png?raw=true" height="380"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_3.PNG?raw=true" height="380"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_1.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_2.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_3.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_3.PNG?raw=true" height="500"/>

@@ -17,3 +17,13 @@ ITIS / 7 sem 4 course
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_1.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_2.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/a_3.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/hw1/i_3.PNG?raw=true" height="500"/>
+  
+</br>  
+
+**counter (week4) - счетчик, реализованный в виде отдельного компонента с двумя свойствами: текст заголовка и его размер**
+
+| Android | iOS |
+:--------:|:-------:
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/i_1.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/i_2.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/a_3.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/i_3.PNG?raw=true" height="500"/>

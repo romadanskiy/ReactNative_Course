@@ -14,7 +14,12 @@ const PostItem = ({data}: {data: IPostData}) => {
         style={styles.userAvatar} 
         source={{uri: data.userAvatarImagePath}} 
       />
-      <Text>{data.postText}</Text>
+
+      <View style={{flex: 1}}>
+        <Text style={styles.postText} numberOfLines={4} ellipsizeMode={'tail'}>
+          {data.postText}
+        </Text>
+      </View>
     </View>
   );
 }
@@ -24,17 +29,26 @@ export { PostItem };
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    marginLeft: 16,
-    marginRight: 16,
-    marginBottom: 8,
-    marginTop: 8,
-    padding: 10,
+    alignItems: 'center',
+    marginLeft: 12,
+    marginRight: 12,
+    marginBottom: 6,
+    marginTop: 6,
+    padding: 12,
     backgroundColor: 'rgba(255,255,255,0.8)',
-    borderRadius: 10,
+    borderTopLeftRadius: 2,
+    borderTopRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
   },
   userAvatar: {
-    width: 100,
-    height: 100,
+    alignSelf: 'flex-start',
+    width: 50,
+    height: 50,
     borderRadius: 50,
-  }
+    marginRight: 12,
+  },
+  postText: {
+    fontSize: 18,
+  },
 });

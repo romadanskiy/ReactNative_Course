@@ -1,11 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { Platform, StyleSheet, StatusBar, View, SafeAreaView } from 'react-native';
 import { PostList } from './components/PostList';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <ExpoStatusBar style="auto" backgroundColor='#e3d5ca' />
 
       <SafeAreaView>
         <PostList />
@@ -17,6 +17,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#d6d6d6',
+    backgroundColor: '#e3d5ca',
+    ...Platform.select({
+      android: {
+        marginTop: StatusBar.currentHeight,
+      },
+    }),
   },
 });

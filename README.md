@@ -36,3 +36,12 @@ ITIS / 7 sem 4 course
 :--------:|:-------:
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot1/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot1/i_1.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot1/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot1/i_2.PNG?raw=true" height="500"/>
+
+</br>  
+
+**screenshot2 - история звонков**
+
+| Android | iOS |
+:--------:|:-------:
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/i_1.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/i_2.PNG?raw=true" height="500"/>

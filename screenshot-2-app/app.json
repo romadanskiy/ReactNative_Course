@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "screenshot-2",
-    "slug": "screenshot-2",
+    "name": "screenshot-2-app",
+    "slug": "screenshot-2-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

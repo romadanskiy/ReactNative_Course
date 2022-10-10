@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hw-1",
-    "slug": "hw-1",
+    "name": "hw-1-app",
+    "slug": "hw-1-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

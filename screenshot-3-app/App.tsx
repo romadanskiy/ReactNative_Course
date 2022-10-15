@@ -1,11 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { Platform, StyleSheet, StatusBar, View, SafeAreaView } from 'react-native';
+import { CallWindow } from './components/CallWindow';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <ExpoStatusBar style='light' backgroundColor='#00786c' />
+
+      <SafeAreaView style={{flex: 1}}>
+        <CallWindow 
+          contactName={'Michael Scott'} 
+          contactAvatarImagePath={'https://miro.medium.com/max/979/1*YRZAmLMn6wUiuAIhsTWQ8Q.jpeg'} />
+      </SafeAreaView>
     </View>
   );
 }
@@ -13,8 +20,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#00786c',
+    ...Platform.select({
+      android: {
+        marginTop: StatusBar.currentHeight,
+      },
+    }),
   },
 });

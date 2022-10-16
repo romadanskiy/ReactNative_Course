@@ -45,3 +45,12 @@ ITIS / 7 sem 4 course
 :--------:|:-------:
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/i_1.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot2/i_2.PNG?raw=true" height="500"/>
+
+</br>  
+
+**screenshot3 - экран звонка WhatsApp**
+
+| Android | iOS |
+:--------:|:-------:
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/i_1.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/i_2.PNG?raw=true" height="500"/>

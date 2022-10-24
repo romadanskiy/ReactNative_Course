@@ -54,3 +54,12 @@ ITIS / 7 sem 4 course
 :--------:|:-------:
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/i_1.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot3/i_2.PNG?raw=true" height="500"/>
+
+</br>  
+
+**week5.1 - первая кнопка, нажатая более 3-х раз, становится disabled, вторая кнопка сбрасывает состояние первой кнопки**
+
+| Android | iOS |
+:--------:|:-------:
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/i_1.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/i_2.PNG?raw=true" height="500"/>

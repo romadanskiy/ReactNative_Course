@@ -63,3 +63,19 @@ ITIS / 7 sem 4 course
 :--------:|:-------:
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/i_1.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week5.1/i_2.PNG?raw=true" height="500"/>
+
+</br>  
+
+**navigation - 4 экрана: главный экран, экран списка пользователей, экран профиля пользователя, экран о приложении**  
+Навигация:  
+- с Главного экрана в Cписок пользователей и О Приложении
+- со Списка пользователей во все остальные 3 экрана
+- с экрана О приложении - на Главный экран
+- с экрана Профиля пользователя - на все 3 экрана
+
+| Android | iOS |
+:--------:|:-------:
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/i_1.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/i_2.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/a_3.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/i_3.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/a_4.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/navigation/i_4.PNG?raw=true" height="500"/>

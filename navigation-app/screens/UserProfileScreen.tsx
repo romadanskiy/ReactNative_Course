@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
+    textAlign: 'center',
     fontSize: 25,
     marginBottom: 10,
   },
@@ -58,6 +59,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   userName: {
+    textAlign: 'center',
     fontSize: 20,
     marginBottom: 10,
   },

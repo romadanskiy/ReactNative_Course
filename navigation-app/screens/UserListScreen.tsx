@@ -63,7 +63,7 @@ const userDataModels: IUserData[] = [
 function UserListItem({ data, navigation }: { data: IUserData, navigation: NavigationProp }) {
   return (
     <View style={styles.userItem}>
-      <Text>{data.userName}</Text>
+      <Text style={styles.userName}>{data.userName}</Text>
       <Button
         title="Profile"
         onPress={() => { navigation.navigate('UserProfile', { userName: data.userName }) }} />
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
+    textAlign: 'center',
     fontSize: 25,
     marginBottom: 10,
   },
@@ -129,5 +130,10 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 7,
     borderWidth: 1,
+    borderRadius: 5,
   },
+  userName: {
+    fontSize: 15,
+    marginBottom: 5,
+  }
 });

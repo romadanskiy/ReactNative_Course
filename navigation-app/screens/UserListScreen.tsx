@@ -135,5 +135,5 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 15,
     marginBottom: 5,
-  }
+  },
 });

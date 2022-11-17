@@ -1,34 +1,30 @@
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { StyleSheet, Platform, StatusBar, View, SafeAreaView } from 'react-native';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 
 import TaskListScreen from './components/TaskListScreen'
 
 export default class App extends Component {
   render() {
-    return (<TaskListScreen />)
+    return (
+      <View style={styles.container}>
+        <ExpoStatusBar style='auto' />
+
+        <SafeAreaView style={{ flex: 1 }}>
+          <TaskListScreen />
+        </SafeAreaView>
+      </View>
+    );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    ...Platform.select({
+      android: {
+        marginTop: StatusBar.currentHeight,
+      },
+    }),
   },
 });

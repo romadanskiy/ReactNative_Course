@@ -1,52 +1,41 @@
-import React, { Component } from 'react'
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  FlatList,
-  View
-} from 'react-native'
+import React from 'react'
+import { StyleSheet, Text, TouchableOpacity, FlatList, View } from 'react-native'
+import { observer } from 'mobx-react-lite'
 
-import taskListStore from '../mobx/TaskListStore'
-import { observer } from 'mobx-react'
+import taskListStore from '../mobx/TaskListStore';
 
-@observer
-export default class TaskListScreen extends Component {
-
-  renderItem = ({ item, index }) => {
-    return (
-      <View style={styles.itemContainer}>
-        <View>
-          <TouchableOpacity style={{ marginTop: -2 }} onPress={() => taskListStore.finishItem(index)}>
-            <Text> {(item.isFinished) ? `✅` : `🕘`} </Text>
-          </TouchableOpacity>
-        </View>
-        <View style={{ flex: 1 }}>
-          <Text style={{ color: 'black' }}>{item.title}</Text>
-        </View>
-        <View style={{ justifyContent: 'center' }}>
-          <TouchableOpacity style={{ marginTop: -2 }} onPress={() => taskListStore.deleteItem(index)}>
-            <Text>{`❌`}</Text>
-          </TouchableOpacity>
-        </View>
+const TaskListScreen = observer(() => {
+  const renderItem = ({ item, index }) => (
+    <View style={styles.itemContainer}>
+      <View>
+        <TouchableOpacity style={{ marginTop: -2 }} onPress={() => taskListStore.finishItem(index)}>
+          <Text> {(item.isFinished) ? `✅` : `🕘`} </Text>
+        </TouchableOpacity>
       </View>
-    )
-  }
+      <View style={{ flex: 1 }}>
+        <Text style={{ color: 'black' }}>{item.title}</Text>
+      </View>
+      <View style={{ justifyContent: 'center' }}>
+        <TouchableOpacity style={{ marginTop: -2 }} onPress={() => taskListStore.deleteItem(index)}>
+          <Text>{`❌`}</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  )
 
-  render() {
-    const list = taskListStore.list.slice() // don't forget copy the list from store
+  const list = taskListStore.list.slice();
 
-    return (
-      <FlatList
-        style={styles.container}
-        data={list}
-        extraData={list}
-        keyExtractor={(item, index) => `${index}`}
-        renderItem={this.renderItem}
-      />
-    )
-  }
-}
+  return (
+    <FlatList
+      style={styles.container}
+      data={list}
+      extraData={list}
+      keyExtractor={(item, index) => `${index}`}
+      renderItem={renderItem} />
+  );
+});
+
+export default TaskListScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -69,4 +58,4 @@ const styles = StyleSheet.create({
     shadowColor: 'gray',
     elevation: 2
   }
-})
+});

@@ -10,7 +10,7 @@ ITIS / 7 sem 4 course
 
 </br> 
 
-**hw1 (week1) - использовать различные компоненты React Native**
+**hw1 (week-1) - использовать различные компоненты React Native**
 
 | Android | iOS |
 :--------:|:-------:
@@ -20,13 +20,24 @@ ITIS / 7 sem 4 course
   
 </br>  
 
-**counter (week4) - счетчик, реализованный в виде отдельного компонента с двумя свойствами: текст заголовка и его размер**
+**counter (week-4) - счетчик, реализованный в виде отдельного компонента с двумя свойствами: текст заголовка и его размер**
 
 | Android | iOS |
 :--------:|:-------:
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/i_1.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/i_2.PNG?raw=true" height="500"/>
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/a_3.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/counter/i_3.PNG?raw=true" height="500"/>
+  
+</br>  
+
+**calculator (week-4-extra) - простой калькулятор с базовыми операциями**
+
+| Android | iOS |
+:--------:|:-------:
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/i_1.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/i_2.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/a_3.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/i_3.PNG?raw=true" height="500"/>
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/a_4.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/calculator/i_4.PNG?raw=true" height="500"/>
 
 </br>  
 

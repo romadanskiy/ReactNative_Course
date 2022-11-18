@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
-import { StyleSheet, StatusBar, Platform, Text, View } from 'react-native';
+import { StyleSheet, StatusBar, Platform, SafeAreaView, View } from 'react-native';
 
 import Calculator from './components/Calculator';
 
@@ -9,9 +9,9 @@ export default function App() {
     <View style={styles.container}>
       <ExpoStatusBar style='auto' />
 
-      <View style={styles.calculator}>
+      <SafeAreaView style={styles.calculator}>
         <Calculator />
-      </View>
+      </SafeAreaView>
     </View>
   );
 }
@@ -19,7 +19,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     ...Platform.select({
       android: {
         marginTop: StatusBar.currentHeight,
@@ -28,5 +27,6 @@ const styles = StyleSheet.create({
   },
   calculator: {
     flex: 1,
+    margin: 10,
   },
 });

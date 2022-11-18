@@ -1,42 +1,108 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
+import ExpressionWindow from './ExpressionWindow';
+import ValueButton from './ValueButton';
+import ActionButton from './ActionButton';
 
 export default function Calculator() {
-  const [stack, setStack] = React.useState<Array<string>>([]);
+  const [stack] = React.useState<Array<string>>([]);
+  const [prevExpression, setPrevExpression] = React.useState('');
   const [inputExpression, setInputExpression] = React.useState('');
+  const [hasOperation, setHasOperation] = React.useState(false);
+  const [hasResult, setHasResult] = React.useState(false);
 
-  const isOperation = (s: string) => {
-    return isNaN(+s);
+  const isOperation = (value: string) => {
+    return isNaN(+value);
   }
 
   const updateInputExpression = () => {
     setInputExpression(stack.join(''));
   }
 
-  const clear = () => {
+  const clearPrevExpression = () => {
+    setPrevExpression('');
+  }
+
+  const clearStack = () => {
     stack.splice(0, stack.length);
+  }
+
+  const clearAll = () => {
+    clearStack();
+    setHasOperation(false);
+    setHasResult(false);
+    clearPrevExpression();
     updateInputExpression();
   }
 
   const removeLastElement = () => {
-    stack.pop()
+    let lastvalue = stack.pop();
+    if (lastvalue && isOperation(lastvalue)) {
+      setHasOperation(false);
+    }
     updateInputExpression();
   }
 
-  const pushElement = (e: string) => {
-    if (stack.length === 0) {
-      if (isOperation(e)) {
-        stack.push('0');
-      }
-      stack.push(e);
+  const calculate = () => {
+    if (!hasOperation) {
+      return;
     }
-    else {
-      let lastElement = stack[stack.length - 1];
-      if (isOperation(lastElement) && isOperation(e)) {
-        stack[stack.length - 1] = e;
+
+    let result = '';
+    try {
+      result = eval(inputExpression);
+    }
+    catch (e) {
+      return;
+    }
+
+    let expression = inputExpression;
+    clearAll();
+    setPrevExpression(expression + '=' + result);
+    stack.push(...Array.from(result.toString()));
+    setHasResult(true);
+    updateInputExpression();
+  }
+
+  const pushValue = (value: string) => {
+    if (stack.length === 0) {
+      if (isOperation(value)) {
+        stack.push('0');
+        setHasOperation(true);
+      }
+      stack.push(value);
+    }
+    else if (hasResult) {
+      if (!isOperation(value)) {
+        clearStack();
       }
       else {
-        stack.push(e);
+        setHasOperation(true);
+      }
+      stack.push(value);
+      setHasResult(false);
+    }
+    else {
+      let lastValue = stack[stack.length - 1];
+      if (isOperation(value)) {
+        if (hasOperation) {
+          if (isOperation(lastValue)) {
+            stack[stack.length - 1] = value;
+          }
+          else {
+            calculate();
+            stack.push(value);
+            setHasResult(false);
+          }
+        }
+        else {
+          stack.push(value);
+        }
+        setHasOperation(true);
+      }
+      else {
+        stack.push(value);
       }
     }
     updateInputExpression();
@@ -44,39 +110,54 @@ export default function Calculator() {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Text>{inputExpression}</Text>
+      <View style={styles.row}>
+        <ExpressionWindow prevExpression={prevExpression} inputExpression={inputExpression} />
       </View>
 
       <View style={styles.row}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => clear()}>
-          <Text style={styles.buttonText}>C</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => removeLastElement()}>
-          <Text style={styles.buttonText}>{'<'}-</Text>
-        </TouchableOpacity>
+        <ActionButton text='C' onPress={clearAll} />
+
+        <ActionButton text='<-' onPress={removeLastElement} />
       </View>
 
       <View style={styles.row}>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => { pushElement('1'); }}>
-          <Text style={styles.buttonText}>1</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => { pushElement('2'); }}>
-          <Text style={styles.buttonText}>2</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => { pushElement('+'); }}>
-          <Text style={styles.buttonText}>+</Text>
-        </TouchableOpacity>
+        <ValueButton value='+' onPress={pushValue} />
+
+        <ValueButton value='-' onPress={pushValue} />
+
+        <ValueButton value='*' onPress={pushValue} />
+
+        <ValueButton value='/' onPress={pushValue} />
+      </View>
+
+      <View style={styles.row}>
+        <ValueButton value='7' onPress={pushValue} />
+
+        <ValueButton value='8' onPress={pushValue} />
+
+        <ValueButton value='9' onPress={pushValue} />
+      </View>
+
+      <View style={styles.row}>
+        <ValueButton value='4' onPress={pushValue} />
+
+        <ValueButton value='5' onPress={pushValue} />
+
+        <ValueButton value='6' onPress={pushValue} />
+      </View>
+
+      <View style={styles.row}>
+        <ValueButton value='1' onPress={pushValue} />
+
+        <ValueButton value='2' onPress={pushValue} />
+
+        <ValueButton value='3' onPress={pushValue} />
+      </View>
+
+      <View style={styles.row}>
+        <ValueButton value='0' onPress={pushValue} />
+
+        <ActionButton text='=' onPress={calculate} />
       </View>
     </View>
   );
@@ -87,28 +168,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: 'red',
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderWidth: 1,
-    borderColor: 'yellow',
-  },
-  button: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 50,
-    borderWidth: 1,
-    borderColor: 'green',
-    margin: 15,
-  },
-  buttonText: {
-    color: 'black',
-    fontSize: 16,
-    textAlign: 'center',
-    textTransform: 'uppercase',
   },
 });

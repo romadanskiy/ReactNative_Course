@@ -9,8 +9,11 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.20.2",
     "expo": "~47.0.6",
     "expo-status-bar": "~1.4.2",
+    "mobx": "^6.7.0",
+    "mobx-react-lite": "^3.4.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",

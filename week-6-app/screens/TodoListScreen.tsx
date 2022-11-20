@@ -50,6 +50,7 @@ export default function TodoListScreen() {
   const deleteTodo = (index: number) => {
     let newTodos = todos.filter((item, i) => i != index);
     setTodos(newTodos);
+    filterTodos(newTodos, showOnlyClosed);
   }
 
   const changeImage = (index: number, imageUri: string) => {

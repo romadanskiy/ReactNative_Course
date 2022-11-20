@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import TodoListScreen from './screens/TodoListScreen';
+import TodoEditScreen from './screens/TodoEditScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="TodoList">
+        <Stack.Screen
+          name="TodoList"
+          component={TodoListScreen}
+          options={{
+            headerShown: false,
+            contentStyle: {
+              backgroundColor: 'white',
+            },
+          }} />
+
+        <Stack.Screen
+          name="TodoEdit"
+          component={TodoEditScreen}
+          options={{
+            headerShown: false,
+            contentStyle: {
+              backgroundColor: 'white',
+            },
+          }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

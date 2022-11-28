@@ -158,16 +158,6 @@ ITIS / 7 sem 4 course
 
 **week9.3 - приложение TODO c использованием MobX**  
 
-| Android | iOS |
-:--------:|:-------:
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_1.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_2.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_2.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_3.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_3.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_4.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_4.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_5.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_5.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_6.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_6.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_7.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_7.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_8.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_8.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_9.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_9.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_10.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_10.PNG?raw=true" height="500"/>
-<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/a_11.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/week9.3/i_11.PNG?raw=true" height="500"/>
+| iOS |
+:--------:|
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/records/week9.3/i.gif?raw=true" height="500"/>  |

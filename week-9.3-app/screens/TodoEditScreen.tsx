@@ -3,7 +3,7 @@ import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, StatusBar, Platform, TouchableOpacity } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
-import { observer } from "mobx-react-lite"
+import { observer } from 'mobx-react-lite';
 
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RouteProp } from '@react-navigation/native';
@@ -11,13 +11,14 @@ import type { RouteProp } from '@react-navigation/native';
 import RootStackParamList from './RootStackParamList';
 import ImageAssets from '../assets/ImageAssets';
 import ImageViewer from '../components/ImageViewer';
-
-import todoStore from '../stores/TodoStore';
+import { useStore } from '../stores/StoreHooks';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'TodoEdit'>;
 type TodoEditRouteProp = RouteProp<RootStackParamList, 'TodoEdit'>;
 
 const TodoEditScreen = observer(() => {
+  const todoStore = useStore('todoStore');
+
   const navigation = useNavigation<NavigationProp>();
   const route = useRoute<TodoEditRouteProp>();
 

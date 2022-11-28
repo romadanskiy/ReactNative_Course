@@ -4,33 +4,36 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import TodoListScreen from './screens/TodoListScreen';
 import TodoEditScreen from './screens/TodoEditScreen';
+import { StoresProvider, stores } from './stores/Stores';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="TodoList">
-        <Stack.Screen
-          name="TodoList"
-          component={TodoListScreen}
-          options={{
-            headerShown: false,
-            contentStyle: {
-              backgroundColor: 'white',
-            },
-          }} />
+    <StoresProvider value={stores}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="TodoList">
+          <Stack.Screen
+            name="TodoList"
+            component={TodoListScreen}
+            options={{
+              headerShown: false,
+              contentStyle: {
+                backgroundColor: 'white',
+              },
+            }} />
 
-        <Stack.Screen
-          name="TodoEdit"
-          component={TodoEditScreen}
-          options={{
-            headerShown: false,
-            contentStyle: {
-              backgroundColor: 'white',
-            },
-          }} />
-      </Stack.Navigator>
-    </NavigationContainer>
+          <Stack.Screen
+            name="TodoEdit"
+            component={TodoEditScreen}
+            options={{
+              headerShown: false,
+              contentStyle: {
+                backgroundColor: 'white',
+              },
+            }} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </StoresProvider>
   );
 }

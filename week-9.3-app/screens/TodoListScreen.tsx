@@ -2,21 +2,20 @@ import React from 'react';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TextInput, View, SafeAreaView, StatusBar, Platform, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { observer } from "mobx-react-lite"
+import { observer } from 'mobx-react-lite'
 
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import RootStackParamList from './RootStackParamList';
 import FilterButton from '../components/FilterButton';
 import TodoList from '../components/TodoList';
-import TodoStore from '../stores/TodoStore';
-
-import logStore from '../stores/LogStore';
+import { useStore } from '../stores/StoreHooks';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'TodoList'>;
-const todoStore = new TodoStore(logStore);
 
 const TodoListScreen = observer(() => {
+  const todoStore = useStore('todoStore');
+
   const navigation = useNavigation<NavigationProp>();
 
   const [text, setText] = React.useState('');
@@ -128,6 +127,7 @@ const styles = StyleSheet.create({
   },
   versionContainer: {
     alignItems: 'flex-end',
+    marginVertical: 3,
     marginHorizontal: 20,
   },
   versionText: {

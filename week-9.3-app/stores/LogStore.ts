@@ -1,11 +1,13 @@
 import { makeAutoObservable } from 'mobx'
 
-import ILogStore from './ILogStore';
+import RootStore from './RootStore';
 
-class LogStore implements ILogStore {
+export default class LogStore {
+  rootStore: RootStore;
   logs: string[] = [];
 
-  constructor() {
+  constructor(rootStore: RootStore) {
+    this.rootStore = rootStore;
     makeAutoObservable(this);
   }
 
@@ -13,7 +15,7 @@ class LogStore implements ILogStore {
     let now = new Date();
     let newLog = now.toLocaleString() + ' | ' + message;
     this.logs.push(newLog);
+    
+    console.log(newLog);
   }
 }
-
-export default new LogStore();

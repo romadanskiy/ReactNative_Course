@@ -1,16 +1,16 @@
 import { makeAutoObservable } from 'mobx'
 
+import RootStore from './RootStore';
 import ITodoData from '../components/ITodoData'
-import ILogStore from './ILogStore';
 
 export default class TodoStore {
+  rootStore: RootStore;
   todos: ITodoData[] = [];
   filterOnlyClosed: boolean | null = null;
-  logStore: ILogStore | null = null;
 
-  constructor(logStore: ILogStore) {
+  constructor(rootStore: RootStore) {
+    this.rootStore = rootStore;
     makeAutoObservable(this);
-    this.logStore = logStore;
   }
 
   get filteredTodos() {
@@ -28,34 +28,51 @@ export default class TodoStore {
     let newTodos = [...this.todos, newTodo];
     this.todos = newTodos;
 
-    this.logStore?.log('Added a new Todo: ' + text);
+    this.rootStore.logStore.log('Todo \"' + text + '\" is added.');
   }
 
   changeStatus = (index: number, isClosed: boolean) => {
     let newTodos = [...this.todos];
     let todo = newTodos[index];
+
+    if (todo.isClosed === isClosed)
+      return;
+
     todo.isClosed = isClosed;
     this.todos = newTodos;
 
-    let status = isClosed ? 'closed' : 'open';
-    this.logStore?.log('Todo \"' + todo.text + '"\ status changed to \"' + status + '\"');
+    let status = isClosed ? 'Closed' : 'Open';
+    this.rootStore.logStore.log('Todo \"' + todo.text + '"\ status is changed to \"' + status + '\".');
   }
 
   changeFilter = (filterOnlyClosed: boolean | null) => {
+    if (this.filterOnlyClosed === filterOnlyClosed)
+      return;
+
     this.filterOnlyClosed = filterOnlyClosed;
 
-    this.logStore?.log('Filter changed to')
+    let filter = filterOnlyClosed === null ? 'All' : filterOnlyClosed ? 'Only Closed' : 'Only Open';
+    this.rootStore.logStore.log('Filter is changed to \"' + filter + '\".');
   }
 
   changeImage = (index: number, imageUri: string) => {
     let newTodos = [...this.todos];
     let todo = newTodos[index];
+
+    if (todo.imageUri === imageUri)
+      return;
+
     todo.imageUri = imageUri;
     this.todos = newTodos;
+
+    this.rootStore.logStore.log('Todo \"' + todo.text + '"\ image is changed to \"' + imageUri + '\".');
   }
 
   deleteTodo = (index: number) => {
+    let todo = this.todos[index];
     let newTodos = this.todos.filter((item, i) => i != index);
     this.todos = newTodos;
+
+    this.rootStore.logStore.log('Todo \"' + todo.text + '"\ is deleted.');
   }
 }

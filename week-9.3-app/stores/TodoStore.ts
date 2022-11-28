@@ -1,13 +1,16 @@
 import { makeAutoObservable } from 'mobx'
 
 import ITodoData from '../components/ITodoData'
+import ILogStore from './ILogStore';
 
-class TodoStore {
+export default class TodoStore {
   todos: ITodoData[] = [];
   filterOnlyClosed: boolean | null = null;
+  logStore: ILogStore | null = null;
 
-  constructor() {
+  constructor(logStore: ILogStore) {
     makeAutoObservable(this);
+    this.logStore = logStore;
   }
 
   get filteredTodos() {
@@ -24,6 +27,8 @@ class TodoStore {
     let newTodo: ITodoData = { text: text, isClosed: false, imageUri: '' };
     let newTodos = [...this.todos, newTodo];
     this.todos = newTodos;
+
+    this.logStore?.log('Added a new Todo: ' + text);
   }
 
   changeStatus = (index: number, isClosed: boolean) => {
@@ -31,10 +36,15 @@ class TodoStore {
     let todo = newTodos[index];
     todo.isClosed = isClosed;
     this.todos = newTodos;
+
+    let status = isClosed ? 'closed' : 'open';
+    this.logStore?.log('Todo \"' + todo.text + '"\ status changed to \"' + status + '\"');
   }
 
   changeFilter = (filterOnlyClosed: boolean | null) => {
     this.filterOnlyClosed = filterOnlyClosed;
+
+    this.logStore?.log('Filter changed to')
   }
 
   changeImage = (index: number, imageUri: string) => {
@@ -49,5 +59,3 @@ class TodoStore {
     this.todos = newTodos;
   }
 }
-
-export default new TodoStore();

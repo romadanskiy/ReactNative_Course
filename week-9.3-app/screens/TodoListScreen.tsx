@@ -9,10 +9,12 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import RootStackParamList from './RootStackParamList';
 import FilterButton from '../components/FilterButton';
 import TodoList from '../components/TodoList';
+import TodoStore from '../stores/TodoStore';
 
-import todoStore from '../stores/TodoStore';
+import logStore from '../stores/LogStore';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'TodoList'>;
+const todoStore = new TodoStore(logStore);
 
 const TodoListScreen = observer(() => {
   const navigation = useNavigation<NavigationProp>();

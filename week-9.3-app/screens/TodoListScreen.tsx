@@ -29,6 +29,10 @@ const TodoListScreen = observer(() => {
     navigation.navigate('TodoEdit', { index: index });
   }
 
+  const openLogs = () => {
+    navigation.navigate('LogList');
+  }
+
   const isAddButtonDisabled = () => {
     return typeof text !== 'string' || text.trim().length === 0
   }
@@ -44,7 +48,6 @@ const TodoListScreen = observer(() => {
       <SafeAreaView style={styles.topSafeArea} />
 
       <SafeAreaView style={styles.bottomSafeArea}>
-
         <View style={styles.headerContainer}>
           <View style={styles.filterContainer}>
             <FilterButton
@@ -69,6 +72,12 @@ const TodoListScreen = observer(() => {
           <View style={styles.versionContainer}>
             <Text style={styles.versionText}>MobX Version</Text>
           </View>
+
+          <TouchableOpacity
+            style={styles.logButton}
+            onPress={openLogs}>
+            <Text style={styles.buttonText}>View logs</Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.todoList}>
@@ -89,9 +98,8 @@ const TodoListScreen = observer(() => {
           style={styles.addButton}
           disabled={isAddButtonDisabled()}
           onPress={addTodo}>
-          <Text style={styles.addButtonText}>Add Todo</Text>
+          <Text style={styles.buttonText}>Add Todo</Text>
         </TouchableOpacity>
-
       </SafeAreaView>
     </KeyboardAvoidingView >
   );
@@ -110,9 +118,11 @@ const styles = StyleSheet.create({
   },
   topSafeArea: {
     flex: 0,
+    backgroundColor: 'lightgray',
   },
   bottomSafeArea: {
     flex: 1,
+    backgroundColor: 'lightblue',
   },
   headerContainer: {
     backgroundColor: 'lightgray',
@@ -136,6 +146,7 @@ const styles = StyleSheet.create({
   },
   todoList: {
     flex: 1,
+    backgroundColor: 'white',
   },
   textInputContainer: {
     backgroundColor: 'lightgray',
@@ -153,7 +164,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
   },
-  addButtonText: {
+  logButton: {
+    backgroundColor: 'darkgray',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+  },
+  buttonText: {
     fontSize: 16,
     textTransform: 'uppercase',
   },

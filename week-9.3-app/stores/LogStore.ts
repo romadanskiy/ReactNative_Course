@@ -15,7 +15,7 @@ export default class LogStore {
     let now = new Date();
     let newLog = now.toLocaleString() + ' | ' + message;
     this.logs.push(newLog);
-    
+
     console.log(newLog);
   }
 }

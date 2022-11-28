@@ -178,6 +178,6 @@ const styles = StyleSheet.create({
   },
   goBackButton: {
     flex: 1,
-    backgroundColor: 'lightgray',
+    backgroundColor: 'darkgray',
   },
 });

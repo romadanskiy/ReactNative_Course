@@ -65,7 +65,7 @@ export default class TodoStore {
     todo.imageUri = imageUri;
     this.todos = newTodos;
 
-    this.rootStore.logStore.log('Todo \"' + todo.text + '"\ image is changed to \"' + imageUri + '\".');
+    this.rootStore.logStore.log('Todo \"' + todo.text + '"\ image is changed.');
   }
 
   deleteTodo = (index: number) => {

@@ -3,7 +3,7 @@ import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { StyleSheet, View, SafeAreaView, StatusBar, Platform, Text, Image, TouchableOpacity } from 'react-native';
 
 const userData = {
-  name: 'Johan Doe',
+  name: 'John Doe',
   avatarImagePath: 'https://raw.githubusercontent.com/romadanskiy/ReactNative_Course/main/avatars/avatar_7.png',
 }
 

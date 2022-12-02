@@ -23,7 +23,7 @@ export default function App() {
         </View>
 
         <View style={styles.noteContainer}>
-          <Text style={styles.noteText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Text>
+          <Text style={styles.noteText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</Text>
         </View>
 
         <TouchableOpacity style={styles.button}>
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
   headerText: {
     textAlign: 'center',
     fontSize: 30,
+    fontWeight: 'bold',
   },
   noteContainer: {
     marginHorizontal: 20,

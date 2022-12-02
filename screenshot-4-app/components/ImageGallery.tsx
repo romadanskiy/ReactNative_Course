@@ -11,7 +11,6 @@ const imageMargin = 1;
 const imageWidth = (screenWidth - imageMargin * 2) / numColumns - imageMargin * 2;
 const imageHeight = imageWidth;
 
-
 const imageExample: IImageData = { imagePath: 'https://raw.githubusercontent.com/romadanskiy/ReactNative_Course/main/avatars/React-native_square.png' };
 const imageCount = 14;
 const data: IImageData[] = Array(imageCount).fill(imageExample);

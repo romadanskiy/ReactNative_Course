@@ -35,20 +35,21 @@ export default function App() {
           </View>
 
           <View style={styles.row}>
-            {[...Array(5)].map(() =>
+            {[...Array(5)].map((e, i) =>
               <Image
+                key={i}
                 style={styles.starImage}
                 source={ImageAssets.star} />)}
           </View>
 
           <View style={styles.row}>
-            {['cadetblue', 'black', 'olivedrab', 'slateblue', 'firebrick', 'gray'].map((color) =>
-              <View style={[styles.colorPicker, { backgroundColor: color }]}></View>)}
+            {['cadetblue', 'black', 'olivedrab', 'slateblue', 'firebrick', 'gray'].map((color, i) =>
+              <View key={i} style={[styles.colorPicker, { backgroundColor: color }]}></View>)}
           </View>
 
           <View style={styles.row}>
-            {['s', 'm', 'l', 'xl'].map((size) =>
-              <View style={styles.sizePicker}>
+            {['s', 'm', 'l', 'xl'].map((size, i) =>
+              <View key={i} style={styles.sizePicker}>
                 <Text style={styles.sizePickerText}>{size}</Text>
               </View>)}
           </View>

@@ -18,8 +18,8 @@ export default function App() {
             source={ImageAssets.like} />
         </View>
 
-        <View style={styles.haederContainer}>
-          <Text style={styles.headerText}>Congratulation, your order is accepted</Text>
+        <View style={styles.titleContainer}>
+          <Text style={styles.titleText}>Congratulation, your order is accepted</Text>
         </View>
 
         <View style={styles.noteContainer}>
@@ -58,11 +58,11 @@ const styles = StyleSheet.create({
     width: 130,
     height: 130,
   },
-  haederContainer: {
+  titleContainer: {
     marginHorizontal: 20,
     marginBottom: 20,
   },
-  headerText: {
+  titleText: {
     textAlign: 'center',
     fontSize: 30,
     fontWeight: 'bold',

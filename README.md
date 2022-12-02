@@ -84,6 +84,14 @@ ITIS / 7 sem 4 course
 
 </br>  
 
+**screenshot6 - экран текстовой публикации**
+
+| Android | iOS |
+:--------:|:-------:
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot6/a_1.png?raw=true" height="500"/>  |  <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/screenshots/screenshot6/i_1.PNG?raw=true" height="500"/>
+
+</br>  
+
 **week5.1 - первая кнопка, нажатая более 3-х раз, становится disabled, вторая кнопка сбрасывает состояние первой кнопки**
 
 | Android | iOS |

@@ -201,3 +201,11 @@ ITIS / 7 sem 4 course
 | iOS |
 :--------:|
 <img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/records/week9.3/i.gif?raw=true" height="500"/>  |
+
+</br>  
+
+**weather - приложение погоды**  
+
+| iOS |
+:--------:|
+<img src="https://github.com/romadanskiy/ReactNative_Course/blob/main/records/weather/i.gif?raw=true" height="500"/>  |
